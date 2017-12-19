@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS">
+      <s:element name="SMVHL7VAL_PLAIN_x0028__x0029_">
+        <s:complexType />
+      </s:element>
+      <s:element name="SMVHL7VAL_PLAIN_x0028__x0029_Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMVHL7VAL_PLAIN_x0028__x0029_Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMVHL7VAL_x0028__x0029_">
+        <s:complexType />
+      </s:element>
+      <s:element name="SMVHL7VAL_x0028__x0029_Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMVHL7VAL_x0028__x0029_Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HL7SoapHeader" type="tns:HL7SoapHeader" />
+      <s:complexType name="HL7SoapHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="USERID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PASSWORD1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PASSWORD2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FACILITYID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGEDATA" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="SMVHL7_PLAIN_x0028__x0029_">
+        <s:complexType />
+      </s:element>
+      <s:element name="SMVHL7_PLAIN_x0028__x0029_Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMVHL7_PLAIN_x0028__x0029_Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMVHL7_x0028__x0029_">
+        <s:complexType />
+      </s:element>
+      <s:element name="SMVHL7_x0028__x0029_Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMVHL7_x0028__x0029_Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VXU_Validation_x0028__x0029_">
+        <s:complexType />
+      </s:element>
+      <s:element name="VXU_Validation_x0028__x0029_Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VXU_Validation_x0028__x0029_Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HL7_Validation" type="tns:HL7_Validation" />
+      <s:complexType name="HL7_Validation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FACILITYID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MESSAGEDATA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERRORS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ISVALID" type="s:boolean" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SMVHL7VAL_PLAIN_x0028__x0029_SoapIn">
+    <wsdl:part name="parameters" element="tns:SMVHL7VAL_PLAIN_x0028__x0029_" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7VAL_PLAIN_x0028__x0029_SoapOut">
+    <wsdl:part name="parameters" element="tns:SMVHL7VAL_PLAIN_x0028__x0029_Response" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7VAL_x0028__x0029_SoapIn">
+    <wsdl:part name="parameters" element="tns:SMVHL7VAL_x0028__x0029_" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7VAL_x0028__x0029_SoapOut">
+    <wsdl:part name="parameters" element="tns:SMVHL7VAL_x0028__x0029_Response" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7VAL()HL7SoapHeader">
+    <wsdl:part name="HL7SoapHeader" element="tns:HL7SoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7_PLAIN_x0028__x0029_SoapIn">
+    <wsdl:part name="parameters" element="tns:SMVHL7_PLAIN_x0028__x0029_" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7_PLAIN_x0028__x0029_SoapOut">
+    <wsdl:part name="parameters" element="tns:SMVHL7_PLAIN_x0028__x0029_Response" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7_x0028__x0029_SoapIn">
+    <wsdl:part name="parameters" element="tns:SMVHL7_x0028__x0029_" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7_x0028__x0029_SoapOut">
+    <wsdl:part name="parameters" element="tns:SMVHL7_x0028__x0029_Response" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7()HL7SoapHeader">
+    <wsdl:part name="HL7SoapHeader" element="tns:HL7SoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="VXU_Validation_x0028__x0029_SoapIn">
+    <wsdl:part name="parameters" element="tns:VXU_Validation_x0028__x0029_" />
+  </wsdl:message>
+  <wsdl:message name="VXU_Validation_x0028__x0029_SoapOut">
+    <wsdl:part name="parameters" element="tns:VXU_Validation_x0028__x0029_Response" />
+  </wsdl:message>
+  <wsdl:message name="VXU_Validation()HL7_Validation">
+    <wsdl:part name="HL7_Validation" element="tns:HL7_Validation" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7VAL_PLAIN_x0028__x0029_HttpGetIn" />
+  <wsdl:message name="SMVHL7VAL_PLAIN_x0028__x0029_HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7VAL_x0028__x0029_HttpGetIn" />
+  <wsdl:message name="SMVHL7VAL_x0028__x0029_HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7_PLAIN_x0028__x0029_HttpGetIn" />
+  <wsdl:message name="SMVHL7_PLAIN_x0028__x0029_HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7_x0028__x0029_HttpGetIn" />
+  <wsdl:message name="SMVHL7_x0028__x0029_HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VXU_Validation_x0028__x0029_HttpGetIn" />
+  <wsdl:message name="VXU_Validation_x0028__x0029_HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7VAL_PLAIN_x0028__x0029_HttpPostIn" />
+  <wsdl:message name="SMVHL7VAL_PLAIN_x0028__x0029_HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7VAL_x0028__x0029_HttpPostIn" />
+  <wsdl:message name="SMVHL7VAL_x0028__x0029_HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7_PLAIN_x0028__x0029_HttpPostIn" />
+  <wsdl:message name="SMVHL7_PLAIN_x0028__x0029_HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SMVHL7_x0028__x0029_HttpPostIn" />
+  <wsdl:message name="SMVHL7_x0028__x0029_HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VXU_Validation_x0028__x0029_HttpPostIn" />
+  <wsdl:message name="VXU_Validation_x0028__x0029_HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ProviderInterface_EXTSoap">
+    <wsdl:operation name="SMVHL7VAL_PLAIN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7VAL_PLAIN</wsdl:documentation>
+      <wsdl:input name="SMVHL7VAL_PLAIN_x0028__x0029_" message="tns:SMVHL7VAL_PLAIN_x0028__x0029_SoapIn" />
+      <wsdl:output name="SMVHL7VAL_PLAIN_x0028__x0029_" message="tns:SMVHL7VAL_PLAIN_x0028__x0029_SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7VAL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7VAL</wsdl:documentation>
+      <wsdl:input name="SMVHL7VAL_x0028__x0029_" message="tns:SMVHL7VAL_x0028__x0029_SoapIn" />
+      <wsdl:output name="SMVHL7VAL_x0028__x0029_" message="tns:SMVHL7VAL_x0028__x0029_SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7_PLAIN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7_PLAIN</wsdl:documentation>
+      <wsdl:input name="SMVHL7_PLAIN_x0028__x0029_" message="tns:SMVHL7_PLAIN_x0028__x0029_SoapIn" />
+      <wsdl:output name="SMVHL7_PLAIN_x0028__x0029_" message="tns:SMVHL7_PLAIN_x0028__x0029_SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7</wsdl:documentation>
+      <wsdl:input name="SMVHL7_x0028__x0029_" message="tns:SMVHL7_x0028__x0029_SoapIn" />
+      <wsdl:output name="SMVHL7_x0028__x0029_" message="tns:SMVHL7_x0028__x0029_SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VXU_Validation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">VXU_Validation()</wsdl:documentation>
+      <wsdl:input name="VXU_Validation_x0028__x0029_" message="tns:VXU_Validation_x0028__x0029_SoapIn" />
+      <wsdl:output name="VXU_Validation_x0028__x0029_" message="tns:VXU_Validation_x0028__x0029_SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ProviderInterface_EXTHttpGet">
+    <wsdl:operation name="SMVHL7VAL_PLAIN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7VAL_PLAIN</wsdl:documentation>
+      <wsdl:input name="SMVHL7VAL_PLAIN_x0028__x0029_" message="tns:SMVHL7VAL_PLAIN_x0028__x0029_HttpGetIn" />
+      <wsdl:output name="SMVHL7VAL_PLAIN_x0028__x0029_" message="tns:SMVHL7VAL_PLAIN_x0028__x0029_HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7VAL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7VAL</wsdl:documentation>
+      <wsdl:input name="SMVHL7VAL_x0028__x0029_" message="tns:SMVHL7VAL_x0028__x0029_HttpGetIn" />
+      <wsdl:output name="SMVHL7VAL_x0028__x0029_" message="tns:SMVHL7VAL_x0028__x0029_HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7_PLAIN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7_PLAIN</wsdl:documentation>
+      <wsdl:input name="SMVHL7_PLAIN_x0028__x0029_" message="tns:SMVHL7_PLAIN_x0028__x0029_HttpGetIn" />
+      <wsdl:output name="SMVHL7_PLAIN_x0028__x0029_" message="tns:SMVHL7_PLAIN_x0028__x0029_HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7</wsdl:documentation>
+      <wsdl:input name="SMVHL7_x0028__x0029_" message="tns:SMVHL7_x0028__x0029_HttpGetIn" />
+      <wsdl:output name="SMVHL7_x0028__x0029_" message="tns:SMVHL7_x0028__x0029_HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VXU_Validation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">VXU_Validation()</wsdl:documentation>
+      <wsdl:input name="VXU_Validation_x0028__x0029_" message="tns:VXU_Validation_x0028__x0029_HttpGetIn" />
+      <wsdl:output name="VXU_Validation_x0028__x0029_" message="tns:VXU_Validation_x0028__x0029_HttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ProviderInterface_EXTHttpPost">
+    <wsdl:operation name="SMVHL7VAL_PLAIN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7VAL_PLAIN</wsdl:documentation>
+      <wsdl:input name="SMVHL7VAL_PLAIN_x0028__x0029_" message="tns:SMVHL7VAL_PLAIN_x0028__x0029_HttpPostIn" />
+      <wsdl:output name="SMVHL7VAL_PLAIN_x0028__x0029_" message="tns:SMVHL7VAL_PLAIN_x0028__x0029_HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7VAL">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7VAL</wsdl:documentation>
+      <wsdl:input name="SMVHL7VAL_x0028__x0029_" message="tns:SMVHL7VAL_x0028__x0029_HttpPostIn" />
+      <wsdl:output name="SMVHL7VAL_x0028__x0029_" message="tns:SMVHL7VAL_x0028__x0029_HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7_PLAIN">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7_PLAIN</wsdl:documentation>
+      <wsdl:input name="SMVHL7_PLAIN_x0028__x0029_" message="tns:SMVHL7_PLAIN_x0028__x0029_HttpPostIn" />
+      <wsdl:output name="SMVHL7_PLAIN_x0028__x0029_" message="tns:SMVHL7_PLAIN_x0028__x0029_HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">SMVHL7</wsdl:documentation>
+      <wsdl:input name="SMVHL7_x0028__x0029_" message="tns:SMVHL7_x0028__x0029_HttpPostIn" />
+      <wsdl:output name="SMVHL7_x0028__x0029_" message="tns:SMVHL7_x0028__x0029_HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VXU_Validation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">VXU_Validation()</wsdl:documentation>
+      <wsdl:input name="VXU_Validation_x0028__x0029_" message="tns:VXU_Validation_x0028__x0029_HttpPostIn" />
+      <wsdl:output name="VXU_Validation_x0028__x0029_" message="tns:VXU_Validation_x0028__x0029_HttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProviderInterface_EXTSoap" type="tns:ProviderInterface_EXTSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SMVHL7VAL_PLAIN">
+      <soap:operation soapAction="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS/SMVHL7VAL_PLAIN()" style="document" />
+      <wsdl:input name="SMVHL7VAL_PLAIN_x0028__x0029_">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7VAL_PLAIN_x0028__x0029_">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7VAL">
+      <soap:operation soapAction="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS/SMVHL7VAL()" style="document" />
+      <wsdl:input name="SMVHL7VAL_x0028__x0029_">
+        <soap:body use="literal" />
+        <soap:header message="tns:SMVHL7VAL()HL7SoapHeader" part="HL7SoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7VAL_x0028__x0029_">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7_PLAIN">
+      <soap:operation soapAction="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS/SMVHL7_PLAIN()" style="document" />
+      <wsdl:input name="SMVHL7_PLAIN_x0028__x0029_">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7_PLAIN_x0028__x0029_">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7">
+      <soap:operation soapAction="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS/SMVHL7()" style="document" />
+      <wsdl:input name="SMVHL7_x0028__x0029_">
+        <soap:body use="literal" />
+        <soap:header message="tns:SMVHL7()HL7SoapHeader" part="HL7SoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7_x0028__x0029_">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VXU_Validation">
+      <soap:operation soapAction="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS/VXU_Validation()" style="document" />
+      <wsdl:input name="VXU_Validation_x0028__x0029_">
+        <soap:body use="literal" />
+        <soap:header message="tns:VXU_Validation()HL7_Validation" part="HL7_Validation" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="VXU_Validation_x0028__x0029_">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProviderInterface_EXTSoap12" type="tns:ProviderInterface_EXTSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SMVHL7VAL_PLAIN">
+      <soap12:operation soapAction="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS/SMVHL7VAL_PLAIN()" style="document" />
+      <wsdl:input name="SMVHL7VAL_PLAIN_x0028__x0029_">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7VAL_PLAIN_x0028__x0029_">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7VAL">
+      <soap12:operation soapAction="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS/SMVHL7VAL()" style="document" />
+      <wsdl:input name="SMVHL7VAL_x0028__x0029_">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SMVHL7VAL()HL7SoapHeader" part="HL7SoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7VAL_x0028__x0029_">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7_PLAIN">
+      <soap12:operation soapAction="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS/SMVHL7_PLAIN()" style="document" />
+      <wsdl:input name="SMVHL7_PLAIN_x0028__x0029_">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7_PLAIN_x0028__x0029_">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7">
+      <soap12:operation soapAction="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS/SMVHL7()" style="document" />
+      <wsdl:input name="SMVHL7_x0028__x0029_">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SMVHL7()HL7SoapHeader" part="HL7SoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7_x0028__x0029_">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VXU_Validation">
+      <soap12:operation soapAction="http://tempuri.org/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS/VXU_Validation()" style="document" />
+      <wsdl:input name="VXU_Validation_x0028__x0029_">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:VXU_Validation()HL7_Validation" part="HL7_Validation" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="VXU_Validation_x0028__x0029_">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProviderInterface_EXTHttpGet" type="tns:ProviderInterface_EXTHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SMVHL7VAL_PLAIN">
+      <http:operation location="/SMVHL7VAL_PLAIN()" />
+      <wsdl:input name="SMVHL7VAL_PLAIN_x0028__x0029_">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7VAL_PLAIN_x0028__x0029_">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7VAL">
+      <http:operation location="/SMVHL7VAL()" />
+      <wsdl:input name="SMVHL7VAL_x0028__x0029_">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7VAL_x0028__x0029_">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7_PLAIN">
+      <http:operation location="/SMVHL7_PLAIN()" />
+      <wsdl:input name="SMVHL7_PLAIN_x0028__x0029_">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7_PLAIN_x0028__x0029_">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7">
+      <http:operation location="/SMVHL7()" />
+      <wsdl:input name="SMVHL7_x0028__x0029_">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7_x0028__x0029_">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VXU_Validation">
+      <http:operation location="/VXU_Validation()" />
+      <wsdl:input name="VXU_Validation_x0028__x0029_">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="VXU_Validation_x0028__x0029_">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProviderInterface_EXTHttpPost" type="tns:ProviderInterface_EXTHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SMVHL7VAL_PLAIN">
+      <http:operation location="/SMVHL7VAL_PLAIN()" />
+      <wsdl:input name="SMVHL7VAL_PLAIN_x0028__x0029_">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7VAL_PLAIN_x0028__x0029_">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7VAL">
+      <http:operation location="/SMVHL7VAL()" />
+      <wsdl:input name="SMVHL7VAL_x0028__x0029_">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7VAL_x0028__x0029_">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7_PLAIN">
+      <http:operation location="/SMVHL7_PLAIN()" />
+      <wsdl:input name="SMVHL7_PLAIN_x0028__x0029_">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7_PLAIN_x0028__x0029_">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMVHL7">
+      <http:operation location="/SMVHL7()" />
+      <wsdl:input name="SMVHL7_x0028__x0029_">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="SMVHL7_x0028__x0029_">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VXU_Validation">
+      <http:operation location="/VXU_Validation()" />
+      <wsdl:input name="VXU_Validation_x0028__x0029_">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="VXU_Validation_x0028__x0029_">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProviderInterface_EXT">
+    <wsdl:port name="ProviderInterface_EXTSoap" binding="tns:ProviderInterface_EXTSoap">
+      <soap:address location="https://hl7smv.dhss.mo.gov/Services/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProviderInterface_EXTSoap12" binding="tns:ProviderInterface_EXTSoap12">
+      <soap12:address location="https://hl7smv.dhss.mo.gov/Services/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProviderInterface_EXTHttpGet" binding="tns:ProviderInterface_EXTHttpGet">
+      <http:address location="https://hl7smv.dhss.mo.gov/Services/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProviderInterface_EXTHttpPost" binding="tns:ProviderInterface_EXTHttpPost">
+      <http:address location="https://hl7smv.dhss.mo.gov/Services/SMVAX_ProviderInterface_EXT_WS/ProviderInterface_EXT_WS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

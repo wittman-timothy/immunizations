@@ -1,0 +1,13 @@
+I used these commands in the "Bash on Ubuntu on Windows" console to convert the CNG cert to RSA for use with .NET
+YOU MUST TAKE THE .pfx THEY GIVE YOU AND DO ALL THE FOLLOWING STEPS.
+1.) Import the origional pfx to get the root auth installed.
+2.) Uninstall the machine named private key
+3.) Run the following on the .pfx:
+
+	openssl pkcs12 -in "Hy-Vee_WS11_CNG.pfx" -nokeys -out "IRISCert.cer" -passin "pass:imIHh1Z9srGEd+"
+	openssl pkcs12 -in "Hy-Vee_WS11_CNG.pfx" -nocerts –out "IRISCert.pem" -passin "pass:imIHh1Z9srGEd+" -passout "pass:imIHh1Z9srGEd+"
+	openssl rsa -inform PEM -in "IRISCert.pem" -out "IRISCert.rsa" -passin "pass:imIHh1Z9srGEd+" -passout "pass:imIHh1Z9srGEd+"
+	openssl pkcs12 -export -in "IRISCert.cer" -inkey "IRISCert.rsa" -out "Hy-Vee_WS11_RSA.pfx" -passin "pass:imIHh1Z9srGEd+" -passout "pass:imIHh1Z9srGEd+"
+
+4.) Import the new .pfx into the machine private store
+5.) Copy the .cer to a folder and point the application .config to it.
